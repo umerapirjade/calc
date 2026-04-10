@@ -1,60 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="20dp">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <EditText
-        android:id="@+id/num1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter First Number"
-        android:inputType="numberDecimal"/>
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CalculatorApp">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-    <EditText
-        android:id="@+id/num2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter Second Number"
-        android:inputType="numberDecimal"
-        android:layout_marginTop="10dp"/>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
-    <Button
-        android:id="@+id/btnAdd"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Add"
-        android:layout_marginTop="15dp"/>
-
-    <Button
-        android:id="@+id/btnSub"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Subtract"
-        android:layout_marginTop="5dp"/>
-
-    <Button
-        android:id="@+id/btnMul"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Multiply"
-        android:layout_marginTop="5dp"/>
-
-    <Button
-        android:id="@+id/btnDiv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Divide"
-        android:layout_marginTop="5dp"/>
-w
-    <TextView
-        android:id="@+id/result"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Result"
-        android:textSize="20sp"
-        android:layout_marginTop="20dp"/>
-
-</LinearLayout>
+</manifest>
